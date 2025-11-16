@@ -1,4 +1,7 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+"use client";
+
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { motion } from "motion/react";
 
 const testimonials = [
     {
@@ -28,14 +31,31 @@ export default function TestimonialsSection() {
     return (
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-6xl px-6">
-                <div className="mb-16 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="mb-16 text-center"
+                >
                     <h2 className="mb-4 font-bold text-3xl text-foreground lg:text-4xl">
                         Apa Kata Pengguna?
                     </h2>
-                </div>
+                </motion.div>
                 <div className="grid gap-8 md:grid-cols-3">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="rounded-2xl border bg-background p-6 shadow-sm">
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                duration: 0.5,
+                                delay: index * 0.1,
+                            }}
+                            whileHover={{ scale: 1.05, y: -5 }}
+                            className="rounded-2xl border bg-background p-6 shadow-sm transition-all hover:shadow-xl"
+                        >
                             <div className="mb-4 flex gap-1">
                                 {[...Array(testimonial.rating)].map((_, i) => (
                                     <span key={i} className="text-yellow-500">⭐</span>
@@ -60,7 +80,7 @@ export default function TestimonialsSection() {
                                     <span className="text-muted-foreground block text-sm">{testimonial.role}</span>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

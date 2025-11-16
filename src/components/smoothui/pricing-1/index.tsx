@@ -160,27 +160,34 @@ export function PricingSimple() {
     <section id="pricing">
       <div className="relative bg-muted/50 py-16 md:py-32">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="mx-auto max-w-2xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto max-w-2xl text-center"
+          >
             <h2 className="text-balance font-bold text-3xl md:text-4xl lg:text-5xl lg:tracking-tight">
               Simple & Transparan
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-balance text-foreground/70 text-lg">
               Termasuk Free Setup & Free Support
             </p>
-          </div>
+          </motion.div>
           <div className="container mt-12">
             <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
               {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={plan.name}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="group relative flex flex-col overflow-hidden rounded-2xl border bg-background p-8"
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{
-                    duration: 0.3,
+                    duration: 0.5,
                     delay: index * 0.1,
-                    ease: [0.22, 1, 0.36, 1],
                   }}
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border bg-background p-8 transition-all hover:shadow-xl"
                 >
                   {/* Gradient Accent */}
                   <div

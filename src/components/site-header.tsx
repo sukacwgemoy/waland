@@ -14,9 +14,15 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-background px-2">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <div className="flex items-center space-x-3">
-          <Link href="/" className="flex items-center space-x-3 text-primary">
-            <Icons.logo className="size-12" />
-            <span className="font-bold">{siteConfig.name}</span>
+          <Link href="/" className="flex items-center gap-2">
+            <span className="font-bold text-2xl text-foreground">CS</span>
+            <span className="font-bold text-2xl text-foreground">AI</span>
+            <div className="relative ml-1">
+              <div className="absolute h-6 w-6 rounded-full bg-[#0ae448] opacity-20"></div>
+              <svg className="relative h-6 w-6" viewBox="0 0 24 24" fill="none">
+                <path d="M12 4 L18 12 L12 20 L6 12 Z" fill="#0ae448"/>
+              </svg>
+            </div>
           </Link>
         </div>
         <div className="flex items-center space-x-5 md:space-x-6">

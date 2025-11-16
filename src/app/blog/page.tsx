@@ -1,14 +1,12 @@
+"use client";
+
 import React from "react";
-import { Metadata } from "next";
 import PageHeader from "@/components/page-header";
 import { blogs as allBlogs } from "#site/content";
 import Image from "next/image";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
-
-export const metadata: Metadata = {
-  title: "Blog",
-};
+import { motion } from "motion/react";
 
 export default function BlogPage() {
   const blogs = allBlogs
@@ -18,15 +16,20 @@ export default function BlogPage() {
     <div className="container max-w-4xl py-6 lg:py-10">
       <PageHeader
         title="Blog"
-        description="A blog using velite. Posts are written in MDX"
+        description="Artikel dan tips seputar Customer Service AI"
       />
       <hr className="my-8" />
 
       {blogs.length ? (
         <div className="grid gap-10 sm:grid-cols-2">
-          {blogs.map((blog) => (
-            <article
+          {blogs.map((blog, index) => (
+            <motion.article
               key={blog.slug}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
               className="group relative flex flex-col space-y-2"
             >
               {blog.image && (
@@ -35,7 +38,7 @@ export default function BlogPage() {
                   alt={blog.title}
                   width={804}
                   height={452}
-                  className="border bg-muted transition-colors"
+                  className="border bg-muted transition-colors rounded-lg"
                 />
               )}
 
@@ -55,7 +58,7 @@ export default function BlogPage() {
               <Link href={blog.slug} className="absolute inset-0">
                 <span className="sr-only">View Article</span>
               </Link>
-            </article>
+            </motion.article>
           ))}
         </div>
       ) : (
