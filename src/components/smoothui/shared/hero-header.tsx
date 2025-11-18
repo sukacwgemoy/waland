@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
@@ -49,12 +48,20 @@ export const HeroHeader = () => {
                 >
                   <span className="sr-only">CS AI</span>
                   <div className="flex items-center gap-2">
-                    <span className="font-bold text-2xl text-foreground">CS</span>
-                    <span className="font-bold text-2xl text-foreground">AI</span>
+                    <span className="font-bold text-2xl text-foreground">
+                      CS
+                    </span>
+                    <span className="font-bold text-2xl text-foreground">
+                      AI
+                    </span>
                     <div className="relative ml-1">
                       <div className="absolute h-6 w-6 rounded-full bg-[#0ae448] opacity-20"></div>
-                      <svg className="relative h-6 w-6" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 4 L18 12 L12 20 L6 12 Z" fill="#0ae448"/>
+                      <svg
+                        className="relative h-6 w-6"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path d="M12 4 L18 12 L12 20 L6 12 Z" fill="#0ae448" />
                       </svg>
                     </div>
                   </div>
@@ -179,12 +186,8 @@ export const HeroHeader = () => {
                     >
                       <div className="flex items-center gap-2">
                         <ThemeToggle />
-                        <Button
-                          asChild
-                          size="sm"
-                          variant="ghost"
-                        >
-                          <a 
+                        <Button asChild size="sm" variant="ghost">
+                          <a
                             href="https://wa.me/6285158067122?text=Halo,%20saya%20ingin%20bertanya%20tentang%20CS%20AI"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -193,10 +196,7 @@ export const HeroHeader = () => {
                             <span>Hubungi Kami</span>
                           </a>
                         </Button>
-                        <Button
-                          asChild
-                          size="sm"
-                        >
+                        <Button asChild size="sm">
                           <a
                             href="https://wa.me/6285158067122?text=Halo,%20saya%20ingin%20berlangganan%20CS%20AI"
                             target="_blank"
