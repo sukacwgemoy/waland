@@ -12,7 +12,8 @@ const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
 export const metadata: Metadata = {
   title: {
     template: "%s | CS AI - Customer Service AI 24/7",
-    default: "CS AI - Customer Service WhatsApp AI 24/7 Cepat, Cerdas & Hemat Biaya",
+    default:
+      "CS AI - Customer Service WhatsApp AI 24/7 Cepat, Cerdas & Hemat Biaya",
   },
   description:
     "Tingkatkan pelayanan pelanggan Anda dengan CS AI yang mampu menjawab otomatis, akurat, dan langsung merespon tanpa menunggu admin online. Bekerja nonstop 24 jam.",
@@ -25,8 +26,8 @@ export const metadata: Metadata = {
     "Automasi CS",
     "WhatsApp Bot Indonesia",
   ],
-  authors: [{ name: "sukacwgemoy" }],
-  creator: "sukacwgemoy",
+  authors: [{ name: "Ahmad Aziz" }],
+  creator: "Ahmad Aziz",
   openGraph: {
     type: "website",
     locale: "id_ID",
@@ -75,7 +76,7 @@ export default function RootLayout({
         className={cn(
           "min-h-screen antialiased font-lexend bg-background",
           lexend.variable,
-          fontCode.variable,
+          fontCode.variable
         )}
       >
         <ThemeProvider defaultTheme="dark">
