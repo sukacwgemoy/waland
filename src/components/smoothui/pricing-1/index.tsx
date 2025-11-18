@@ -214,12 +214,14 @@ export function PricingSimple() {
                       <span className="text-foreground/70">{plan.period}</span>
                     </div>
                     {/* CTA Button */}
-                    <button
-                      className="mb-6 inline-flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-foreground px-4 py-2 font-medium text-background text-sm transition-colors hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                      type="button"
+                    <a
+                      href="https://wa.me/6285158067122?text=Halo,%20saya%20ingin%20berlangganan%20CS%20AI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mb-6 inline-flex h-10 w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-foreground px-4 py-2 font-medium text-background text-sm transition-colors hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     >
                       {index === 0 ? "Mulai Sekarang" : "Pilih Paket Hemat"}
-                    </button>
+                    </a>
                     {/* Description */}
                     <p className="mb-6 text-foreground/70 text-sm leading-relaxed">
                       {plan.description}

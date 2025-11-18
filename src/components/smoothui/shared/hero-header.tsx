@@ -180,19 +180,31 @@ export const HeroHeader = () => {
                       <div className="flex items-center gap-2">
                         <ThemeToggle />
                         <Button
-                          onClick={() => setMenuState(false)}
+                          asChild
                           size="sm"
-                          type="button"
                           variant="ghost"
                         >
-                          <span>Login</span>
+                          <a 
+                            href="https://wa.me/6285158067122?text=Halo,%20saya%20ingin%20bertanya%20tentang%20CS%20AI"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setMenuState(false)}
+                          >
+                            <span>Hubungi Kami</span>
+                          </a>
                         </Button>
                         <Button
-                          onClick={() => setMenuState(false)}
+                          asChild
                           size="sm"
-                          type="button"
                         >
-                          <span>Sign Up</span>
+                          <a
+                            href="https://wa.me/6285158067122?text=Halo,%20saya%20ingin%20berlangganan%20CS%20AI"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setMenuState(false)}
+                          >
+                            <span>Mulai Sekarang</span>
+                          </a>
                         </Button>
                       </div>
                     </motion.div>

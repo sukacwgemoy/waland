@@ -28,11 +28,11 @@ export function HeroProduct({
   description = "Tingkatkan pelayanan pelanggan Anda dengan CS AI yang mampu menjawab otomatis, akurat, dan langsung merespon tanpa menunggu admin online. Bekerja nonstop. Ramah. Belajar dari data bisnis Anda. Handover otomatis ke admin kapan saja.",
   primaryButton = {
     text: "Coba Sekarang",
-    url: "#pricing",
+    url: "https://wa.me/6285158067122?text=Halo,%20saya%20tertarik%20dengan%20CS%20AI",
   },
   secondaryButton = {
     text: "Lihat Demo",
-    url: "#demo",
+    url: "https://wa.me/6285158067122?text=Halo,%20saya%20ingin%20melihat%20demo%20CS%20AI",
   },
   imageSrc = "/hero.png",
   imageAlt = "CS AI Dashboard Interface",

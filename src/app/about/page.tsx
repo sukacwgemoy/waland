@@ -178,10 +178,12 @@ export default function AboutPage() {
             dan support yang responsif adalah komitmen kami.
           </p>
           <a 
-            href="#pricing" 
+            href="https://wa.me/6285158067122?text=Halo,%20saya%20ingin%20tanya%20tentang%20harga%20CS%20AI"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md bg-foreground px-8 py-3 font-medium text-background transition-all hover:bg-foreground/90"
           >
-            Lihat Harga Transparan Kami
+            Hubungi Kami via WhatsApp
           </a>
         </motion.section>
 
