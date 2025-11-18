@@ -113,7 +113,7 @@ export default function AboutPage() {
           <div className="space-y-4">
             <div className="rounded-lg border-l-4 border-red-500 bg-red-50 p-4 dark:bg-red-950/20">
               <p className="text-foreground/90">
-                <strong>❌ Iklan: "Mulai dari Rp50.000"</strong>
+                <strong>❌ Iklan: &ldquo;Mulai dari Rp50.000&rdquo;</strong>
                 <br />
                 <span className="text-sm text-muted-foreground">
                   Realita: Setelah konsultasi, ternyata harga sebenarnya
@@ -123,7 +123,7 @@ export default function AboutPage() {
             </div>
             <div className="rounded-lg border-l-4 border-red-500 bg-red-50 p-4 dark:bg-red-950/20">
               <p className="text-foreground/90">
-                <strong>❌ "Setup Gratis"</strong>
+                <strong>❌ &ldquo;Setup Gratis&rdquo;</strong>
                 <br />
                 <span className="text-sm text-muted-foreground">
                   Realita: Setup gratis, tapi biaya maintenance bulanan sangat
@@ -133,7 +133,7 @@ export default function AboutPage() {
             </div>
             <div className="rounded-lg border-l-4 border-red-500 bg-red-50 p-4 dark:bg-red-950/20">
               <p className="text-foreground/90">
-                <strong>❌ "Unlimited Chat"</strong>
+                <strong>❌ &ldquo;Unlimited Chat&rdquo;</strong>
                 <br />
                 <span className="text-sm text-muted-foreground">
                   Realita: Ada fair usage policy yang membatasi, atau kena
